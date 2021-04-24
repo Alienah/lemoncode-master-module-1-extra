@@ -51,14 +51,11 @@ body {
   background-color: $secondaryColor;
   position: sticky;
   top: 0;
+
   @media (min-width: $break1) {
     position: static;
     width: 200px;
   }
-}
-
-.page_main {
-  flex: 1;
 }
 
 .menu-title {
@@ -114,6 +111,10 @@ body {
     border-radius: 0;
     box-shadow: $boxShadowLight;
   }
+}
+
+.page_main {
+  flex: 1;
 }
 
 .card-list {
