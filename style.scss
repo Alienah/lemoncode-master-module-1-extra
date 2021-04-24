@@ -1,5 +1,106 @@
+@import "./scss/fonts";
+@import "./scss/mixins";
 @import "./scss/variables";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  @include openSansRegular;
+  font-size: 18px;
+}
 
 .toolbar {
   display: none;
+}
+
+.page-title {
+  background-color: $primaryColor;
+  padding: $size4;
+  color: $inverseColor;
+  font-size: 24px;
+  @include openSansBold;
+}
+
+.page-container {
+  flex: 1;
+  background-color: $grayLightColor;
+}
+
+.page_nav {
+  background-color: $secondaryColor;
+}
+
+.menu-title {
+  display: none;
+}
+
+.page_nav {
+  position: sticky;
+  top: 0;
+}
+
+.menu-container {
+  @include openSansBold;
+}
+
+.menu-list {
+  @include resetList;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $size4 0;
+}
+
+.menu-item {
+  background-color: $tertiaryColor;
+  border: 1px solid $grayLightColor;
+  border-radius: $size1;
+  padding: $size4;
+  margin: 0 $size2;
+  flex: 1;
+
+  &:hover {
+    background-color: $primaryColor;
+    color: $inverseColor;
+    cursor: pointer;
+  }
+}
+
+.card-list {
+  @include resetList;
+  padding: $size6;
+}
+
+.card-item {
+  margin: $size2;
+  padding: $size4;
+  display: flex;
+  align-items: center;
+  background-color: $inverseColor;
+  border-radius: $size1;
+
+  &:hover {
+    box-shadow: $boxShadowMedium;
+    cursor: pointer;
+  }
+
+  & .card-img {
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: $boxShadowLight;
+  }
+  
+  & .member-name {
+    margin-left: $size4;
+  }
+}
+
+.footer {
+  padding: $size4;
+  background-color: $tertiaryColor;
+  box-shadow: $boxShadowLight;
 }
